@@ -14,17 +14,16 @@ const load = async ($: EngineInterface) => {
   const root = await $.session.root()
 
   // .claude files merged first, then the harness-neutral .agents ones;
-  // a path seen twice (session started in HOME) is read once.
+  // a file whose text matches an earlier one (same path, a copy or a
+  // symlink) is left out so it is not sent twice.
   const paths = [
-    ...new Set([
-      `${configDir}/${FILE}`,
-      `${root}/.claude/${FILE}`,
-      `${home}/.agents/${FILE}`,
-      `${root}/.agents/${FILE}`,
-    ]),
+    `${configDir}/${FILE}`,
+    `${root}/.claude/${FILE}`,
+    `${home}/.agents/${FILE}`,
+    `${root}/.agents/${FILE}`,
   ]
   const parts = await Promise.all(paths.map(p => readIfPresent($, p)))
-  return parts.filter(Boolean).join('\n\n')
+  return [...new Set(parts.filter(Boolean))].join('\n\n')
 }
 
 export const register: Register = on => {

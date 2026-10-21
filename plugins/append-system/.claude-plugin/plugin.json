@@ -1,1 +1,1 @@
-{ "name": "append-system", "version": "1.0.0", "author": { "name": "tacoman667" }, "description": "Appends APPEND_SYSTEM.md from ~/.claude, <project>/.claude, ~/.agents, <project>/.agents to the system prompt, in that order" }
+{ "name": "append-system", "version": "1.1.0", "author": { "name": "tacoman667" }, "description": "Appends APPEND_SYSTEM.md from ~/.claude, <project>/.claude, ~/.agents, <project>/.agents to the system prompt, in that order" }

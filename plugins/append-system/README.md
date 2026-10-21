@@ -11,7 +11,7 @@ Read once at session start and merged in this order, separated by a blank line:
 3. `~/.agents/APPEND_SYSTEM.md`
 4. `<project>/.agents/APPEND_SYSTEM.md`
 
-Missing or empty files are skipped. `<project>` is the directory the session started in. The `.agents/` files are harness-neutral, so one file can be shared with other tools that read it. The merged text is added as the last section of the system prompt. Edits take effect in the next session.
+Missing or empty files are skipped, and so is a file whose text (ignoring leading and trailing whitespace) matches one already merged, such as `~/.agents/APPEND_SYSTEM.md` symlinked to `~/.claude/APPEND_SYSTEM.md`, so the same text is never sent twice. `<project>` is the directory the session started in. The `.agents/` files are harness-neutral, so one file can be shared with other tools that read it. The merged text is added as the last section of the system prompt. Edits take effect in the next session.
 
 ## Why the system prompt instead of `CLAUDE.md`?
 

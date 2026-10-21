@@ -35,6 +35,15 @@ test('.claude pair merged before .agents pair', async ($, on) => {
   expect(sections.at(-1)?.text).toBe('GC\n\nPC\n\nGA\n\nPA')
 })
 
+test('a file matching an earlier one is sent once, at its first place', async ($, on) => {
+  const sections = await setup($, on, {
+    '/home/u/.claude/APPEND_SYSTEM.md': 'SHARED',
+    '/proj/.claude/APPEND_SYSTEM.md': 'PROJECT',
+    '/home/u/.agents/APPEND_SYSTEM.md': 'SHARED\n',
+  })
+  expect(sections.at(-1)?.text).toBe('SHARED\n\nPROJECT')
+})
+
 test('project only', async ($, on) => {
   const sections = await setup($, on, { '/proj/.claude/APPEND_SYSTEM.md': 'PROJECT' })
   expect(sections.at(-1)?.text).toBe('PROJECT')
