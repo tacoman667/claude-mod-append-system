@@ -13,7 +13,7 @@ A Claude Code plugin marketplace. Each mod lives in its own folder under `plugin
 At the prompt of a Claude Code terminal session:
 
 ```
-/plugin install <mod> --marketplace tacoman667/claude-mods
+/plugin install <mod> --marketplace tacoman667/claude-plugins
 ```
 
 Answer `y` to add the marketplace, then choose a scope. Once the marketplace is added, `/plugin` lists every mod in it to pick from, and `/plugin install <mod>@this-is-the-way` installs one by id.
@@ -21,5 +21,5 @@ Answer `y` to add the marketplace, then choose a scope. Once the marketplace is 
 From a shell:
 
 ```
-claude plugin install <mod> --marketplace tacoman667/claude-mods
+claude plugin install <mod> --marketplace tacoman667/claude-plugins
 ```
