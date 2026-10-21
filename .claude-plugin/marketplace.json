@@ -1,5 +1,11 @@
 {
-  "name": "append-system-prompt",
+  "name": "codingzen-claude-mods",
   "owner": { "name": "tacoman667" },
-  "plugins": [{ "name": "append-system", "source": "./" }]
+  "plugins": [
+    {
+      "name": "append-system",
+      "source": "./plugins/append-system",
+      "description": "Appends APPEND_SYSTEM.md from ~/.claude, <project>/.claude, ~/.agents, <project>/.agents to the system prompt, in that order"
+    }
+  ]
 }
