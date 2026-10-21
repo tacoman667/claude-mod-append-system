@@ -1,0 +1,5 @@
+{
+  "name": "append-system-prompt",
+  "owner": { "name": "tacoman667" },
+  "plugins": [{ "name": "append-system", "source": "./" }]
+}
