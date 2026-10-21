@@ -18,7 +18,7 @@ Missing or empty files are skipped. `<project>` is the directory the session sta
 At the prompt of a Claude Code terminal session:
 
 ```
-/plugin install append-system --marketplace tacoman667/codingzen-claude-mods
+/plugin install append-system --marketplace tacoman667/claude-mods
 ```
 
 Answer `y` to add the marketplace, then choose a scope.
@@ -26,10 +26,10 @@ Answer `y` to add the marketplace, then choose a scope.
 From a shell:
 
 ```
-claude plugin install append-system --marketplace tacoman667/codingzen-claude-mods
+claude plugin install append-system --marketplace tacoman667/claude-mods
 ```
 
-In the desktop app, where `/plugin` does not run: click + next to the prompt box, then Plugins, Add marketplace with `tacoman667/codingzen-claude-mods`, then Add plugin.
+In the desktop app, where `/plugin` does not run: click + next to the prompt box, then Plugins, Add marketplace with `tacoman667/claude-mods`, then Add plugin.
 
 ## Test
 
